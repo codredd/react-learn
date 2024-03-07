@@ -18,8 +18,11 @@ The "return" means that whatever comes after will be returned as a value to the 
 import './App.css';
 
 // We create the new component "Square" and import it into the "Board" component
-function Square() {
-  return <button className="square">1</button>;
+// As next step, we will update the "Square" component to accept a prop and display it
+function Square({ value }: { value: number }) { 
+  // A major difference between jsx and tsx is that props are "typed" in tsx. 
+  //This means that the type of the prop is defined in the function signature
+  return <button className="square">{value}</button>;
 }
 
 export default function Board(){
@@ -34,22 +37,23 @@ export default function Board(){
 
    
   // Button elements were replaced by : <Square /> components by github copilot
+  // The value prop was added to the Square component using github copilot. Automatically added values from 1 to 9
   return (
     <>
       <div className='board-row'>
-        <Square />
-        <Square />
-        <Square />
+        <Square value={1} />
+        <Square value={2} />
+        <Square value={3} />
       </div>
       <div className='board-row'>
-        <Square />
-        <Square />
-        <Square />
+        <Square value={4} />
+        <Square value={5} />
+        <Square value={6} />
       </div>
       <div className='board-row'>
-        <Square />
-        <Square />
-        <Square />
+        <Square value={7} />
+        <Square value={8} />
+        <Square value={9} />
       </div>          
     </>
   )

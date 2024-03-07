@@ -17,7 +17,12 @@ The "return" means that whatever comes after will be returned as a value to the 
 
 import './App.css';
 
-export default function Square(){
+// We create the new component "Square" and import it into the "Board" component
+function Square() {
+  return <button className="square">1</button>;
+}
+
+export default function Board(){
   /* 
   
   return <button className="square">X</button><button className="square">X</button>; 
@@ -26,24 +31,26 @@ export default function Square(){
    React components must return a single root element and not multiple adjacent elements. 
    
    */
-  return(
+
+   
+  // Button elements were replaced by : <Square /> components by github copilot
+  return (
     <>
-    //The numerical order from 1 to 9 was generated using github copilot
-    <div className='board-row'>
-      <button className="square">1</button>
-      <button className="square">2</button>
-      <button className="square">3</button>
-    </div>
-    <div className='board-row'>
-      <button className="square">4</button>
-      <button className="square">5</button>
-      <button className="square">6</button>
-    </div>
-    <div className='board-row'>
-      <button className="square">7</button>
-      <button className="square">8</button>
-      <button className="square">9</button>
-    </div>          
+      <div className='board-row'>
+        <Square />
+        <Square />
+        <Square />
+      </div>
+      <div className='board-row'>
+        <Square />
+        <Square />
+        <Square />
+      </div>
+      <div className='board-row'>
+        <Square />
+        <Square />
+        <Square />
+      </div>          
     </>
   )
 }

@@ -1,35 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/* App.tsx creates a Square component that renders a button. 
+In React, a component is a function or a class that optionally accepts input and returns a React element (JSX). 
+A component is a piece of reusable code that represents a part of the user interface. 
+Components are used to render, manage, and update the UI elements in the application
+The Square component is a function component that takes no input and returns a button element.
+*/
 
-function App() {
-  const [count, setCount] = useState(0)
+/* The first line defines a function called "Square"
+The "export" keyword makes this function accessible outside of this file.
+The "default" keyword tells other files accessing this code that "Square" is the main function of the "App.tsx" file */
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+/* The second line returns a button
+The "return" means that whatever comes after will be returned as a value to the caller of the function
+"<button>" is a javascript element. (A combination of typescript code and HTML tags that defines the UI to be displayed)
+'className="square"' is a property (or prop) of the javascript element "<button>"
+"<button />" marks the end of the javascript element */
+
+import './App.css';
+
+export default function Square(){
+  return <button className="square">X</button>;
 }
-
-export default App

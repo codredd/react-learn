@@ -18,15 +18,31 @@ The "return" means that whatever comes after will be returned as a value to the 
 import './App.css';
 
 export default function Square(){
-  /* return <button className="square">X</button><button className="square">X</button>; 
+  /* 
+  
+  return <button className="square">X</button><button className="square">X</button>; 
 
    This will cause an error saying elements must be wrapped in an enclosing tag.
    React components must return a single root element and not multiple adjacent elements. 
+   
    */
   return(
     <>
+    <div className='board-row'>
       <button className="square">X</button>
       <button className="square">X</button>
+      <button className="square">X</button>
+    </div>
+    <div className='board-row'>
+      <button className="square">X</button>
+      <button className="square">X</button>
+      <button className="square">X</button>
+    </div>
+    <div className='board-row'>
+      <button className="square">X</button>
+      <button className="square">X</button>
+      <button className="square">X</button>
+    </div>          
     </>
   )
 }
